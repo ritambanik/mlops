@@ -31,7 +31,6 @@ def make_prediction(*,input_data:Union[pd.DataFrame, dict]) -> dict:
     results = {"predictions": None, "version": _version, "errors": errors}
     
     predictions = titanic_pipe.predict(validated_data)
-    print(f"Predictions = {predictions[0]}")
 
     results = {"predictions": predictions,"version": _version, "errors": errors}
     print(results)
@@ -39,7 +38,7 @@ def make_prediction(*,input_data:Union[pd.DataFrame, dict]) -> dict:
 
         predictions = titanic_pipe.predict(validated_data)
         results = {"predictions": predictions,"version": _version, "errors": errors}
-        print(results)
+        #print(results)
 
     return results
 
