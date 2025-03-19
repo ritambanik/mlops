@@ -37,11 +37,11 @@ jobs:
       run: |
         pytest
 
-    - name: Upload model
-      if: false
-      uses: actions/upload-artifact@v2
-      with:
-        name: model
-        path: project_with_test/model.pkl
+    # - name: Upload model
+    #   if: false
+    #   uses: actions/upload-artifact@v2
+    #   with:
+    #     name: model
+    #     path: project_with_test/model.pkl
 
 
