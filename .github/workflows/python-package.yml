@@ -1,5 +1,8 @@
 name: Build titanic model
 
+env:
+  ARTIFACT: artifact.bin
+
 on:
   push:
     branches:
@@ -46,10 +49,10 @@ jobs:
         cd project_with_test
         python -m build
 
-    - name: Upload the wheel file for the trained model
-      uses: actions/upload-pages-artifact@v3
-      with:
-        name: titanic_model
-        path: project_with_test/dist/titanic_model-0.0.1-py3-none-any.whl
+    # - name: Upload the wheel file for the trained model
+    #   uses: actions/upload-pages-artifact@v3
+    #   with:
+    #     name: titanic_model
+    #     path: project_with_test/dist/titanic_model-0.0.1-py3-none-any.whl
 
 
